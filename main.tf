@@ -22,7 +22,7 @@ resource "google_sql_user" "myuser" {
 }
 
 resource "google_storage_bucket" "mdtestbucket-gcp-terraform" {
-  name          = "dtestbucket-gcp-terraform"
+  name          = "mdtestbucket-gcp-terraform"
   location      = "us-central1"
   force_destroy = true
 
