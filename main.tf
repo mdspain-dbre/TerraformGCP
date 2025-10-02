@@ -21,9 +21,9 @@ resource "google_sql_user" "myuser" {
   password = "testuser123"
 }
 
-resource "google_storage_bucket" "mdtestbucket" {
-  name          = "mdtestbucket"
-  location      = "US"
+resource "google_storage_bucket" "mdtestbucket-gcp-terraform" {
+  name          = "dtestbucket-gcp-terraform"
+  location      = "us-central1"
   force_destroy = true
 
   public_access_prevention = "enforced"
