@@ -28,3 +28,11 @@ resource "google_storage_bucket" "mdtestbucket-gcp-terraform" {
 
   public_access_prevention = "enforced"
 }
+
+resource "google_storage_bucket" "mdtestbucket-gcp-terraform2" {
+  name          = "mdtestbucket-gcp-terraform2"
+  location      = "us-central1"
+  force_destroy = true
+
+  public_access_prevention = "enforced"
+}
