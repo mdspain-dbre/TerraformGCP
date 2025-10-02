@@ -10,3 +10,13 @@ resource "google_sql_database_instance" "md-mysql-db-instance" {
   deletion_protection  = false
 }
 
+resource "google_sql_database" "md-mysql-db-tf" {
+  name     = "md-test-db"
+  instance = google_sql_database_instance.md-mysql-db-instance.name
+}
+
+resource "google_sql_user" "myuser" {
+  name     = "md-testuser"
+  instance = google_sql_database_instance.md-mysql-db-instance.name
+  password = "testuser123"
+}
